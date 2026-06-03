@@ -2,7 +2,11 @@
 OOP Python implementation of random walk in n dimensions. includes vector operations: addition, subtraction, scalar arithmetic, magnitude calculations, normalization. Designed as a foundation for random walk simulations
 
 
+
+
 Extra Features to the simulation:
+
+
 #1 Extended Walker Dynamics:
 Beyond basic requirements, the simulation introduces modular walker types with traits such as:
     1) a customizable RESTART option for the walker
