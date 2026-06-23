@@ -1,7 +1,7 @@
 # RandomWalk
 OOP Python implementation of random walk in n dimensions. includes vector operations: addition, subtraction, scalar arithmetic, magnitude calculations, normalization. Designed as a foundation for random walk simulations
 
-## Core Mechanics & Features
+## Core Features:
 
 ### 1. Extended Walker Dynamics
 The engine features customizable, modular walker types (`discrete` or `360-degree`) embedded with configurable dynamic behaviors:
@@ -23,7 +23,7 @@ The simulator captures aggregated trial runs to compute and plot macro-statistic
 
 ---
 
-## 📐 System Architecture
+## System Architecture:
 
 The simulation logic enforces a strict object-oriented structure where elements interact strictly via encapsulated vector methods:
 
@@ -40,3 +40,18 @@ graph TD
     F & G & H --> I
     C --> J[Stats Processor]
     J --> K[Plots Visualizer via Matplotlib]
+
+
+random_walk_simulator/
+│
+├── Vector.py       # Custom /nD linear algebra vector wrapper methods
+├── Walkers.py      # Encapsulated Discrete or 360 Walker implementations
+├── Fields.py       # Environment assets (Field, Obstacles, Teleporter, SlowArea)
+├── Sim.py          # Simulator engine, Stats aggregator, and Plots pipeline
+├── Inputs.py       # UserInput verification, string sanitizers, and range checkers
+└── main.py         # CLI entrypoint and execution lifecycle
+
+Quickstart help interface:
+python main.py --help 
+or init interactive simulation by: python main.py play
+
