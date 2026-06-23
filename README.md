@@ -39,7 +39,7 @@ graph TD
     E --> I[Vector Vector Math]
     F & G & H --> I
     C --> J[Stats Processor]
-    J --> K[Plots Visualizer via Matplotlib]
+    J --> K[Plots Visualizer via Matplotlib
 
 
 random_walk_simulator/
