@@ -21,6 +21,19 @@ The simulator captures aggregated trial runs to compute and plot macro-statistic
 * Dynamic intersection interpolation (calculates exact steps required to exit a user-defined radius).
 * Empirical probability distributions of $Y$-axis boundary crossings.
 
+random_walk_simulator/
+│
+├── Vector.py       # Custom /nD linear algebra vector wrapper methods
+├── Walkers.py      # Encapsulated Discrete or 360 Walker implementations
+├── Fields.py       # Environment assets (Field, Obstacles, Teleporter, SlowArea)
+├── Sim.py          # Simulator engine, Stats aggregator, and Plots pipeline
+├── Inputs.py       # UserInput verification, string sanitizers, and range checkers
+└── main.py         # CLI entrypoint and execution lifecycle
+
+Quickstart help interface:
+python main.py --help 
+or init interactive simulation by: python main.py play
+
 ---
 
 ## System Architecture:
@@ -41,17 +54,4 @@ graph TD
     C --> J[Stats Processor]
     J --> K[Plots Visualizer via Matplotlib]
 
-
-random_walk_simulator/
-│
-├── Vector.py       # Custom /nD linear algebra vector wrapper methods
-├── Walkers.py      # Encapsulated Discrete or 360 Walker implementations
-├── Fields.py       # Environment assets (Field, Obstacles, Teleporter, SlowArea)
-├── Sim.py          # Simulator engine, Stats aggregator, and Plots pipeline
-├── Inputs.py       # UserInput verification, string sanitizers, and range checkers
-└── main.py         # CLI entrypoint and execution lifecycle
-
-Quickstart help interface:
-python main.py --help 
-or init interactive simulation by: python main.py play
 
